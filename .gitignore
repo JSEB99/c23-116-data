@@ -1,0 +1,7 @@
+# Archivos csv
+*.csv
+
+# Entorno
+env/
+venv/
+.env
