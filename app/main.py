@@ -31,11 +31,11 @@ async def create_item(transaction: Transaction):
     # preprocessing data
     df = model.preprocessing_data(df)
     # numerical data
-    df = model.str_to_int(df, '../ordinal_encoder.pkl')
+    df = model.str_to_int(df, '../models/ordinal_encoder.pkl')
     # scaling data
-    X_test = model.scaling_data(df, '../scaler.pkl')
+    X_test = model.scaling_data(df, '../models/scaler.pkl')
     # X_test = X_test.values
     print(X_test)
     # predicting
-    prediction = model.eval_model(X_test, '../xgboost_model.pkl')
+    prediction = model.eval_model(X_test, '../models/xgboost_model.pkl')
     return {"prediction": int(prediction[0])}
