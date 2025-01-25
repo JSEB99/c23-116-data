@@ -5,3 +5,7 @@
 env/
 venv/
 .env
+
+## Ignorar direcotorios __pycache__ y archivos .pyc
+__pycache__/
+*.pyc
