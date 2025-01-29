@@ -102,7 +102,7 @@ GROUP BY
     TO_CHAR(trans_date_trans_time, 'YYYY-MM')
 ORDER BY
     transaction_month;
-______________________________________
+--- Cuantas transacciones fraudulentas y no fraudulentas hay
 SELECT
     is_fraud,
     COUNT(*) AS transaction_count
@@ -124,8 +124,7 @@ GROUP BY
 ORDER BY
     transaction_month, is_fraud;
 
----------------------------------------
-consulta aparte
+---Consulta por Trimetre, categoria, trabajo y si es fraude
 SELECT
     DATE_TRUNC('quarter', trans_date_trans_time) AS transaction_quarter,
     category,
@@ -138,7 +137,7 @@ GROUP BY
     transaction_quarter, category, job, is_fraud
 ORDER BY
     transaction_quarter, transaction_count DESC;
---------------------------------
+---consultas por trimestre y si es fraude
 SELECT
     DATE_TRUNC('quarter', trans_date_trans_time) AS transaction_quarter,
     category,
@@ -150,12 +149,12 @@ GROUP BY
     transaction_quarter, category, is_fraud
 ORDER BY
     transaction_quarter, transaction_count DESC;
-----------------------------------------
+---cuenta el total de columnas
 SELECT
     COUNT(*) AS total_rows
 FROM
     transactions;
------------------------------------------
+---cuenta el total de columnas y el genero
 SELECT
     gender,
     is_fraud,
@@ -166,7 +165,10 @@ GROUP BY
     gender, is_fraud
 ORDER BY
     gender, is_fraud;
-------------------------------------------
+/* la siguiente consulta permite :
+- analizar cómo varían las transacciones a lo largo del tiempo (por trimestre).
+- identificar patrones en transacciones fraudulentas por categoría y trimestre.
+- para detectar tendencias en fraude o ventas en diferentes sectores */
 SELECT
     CONCAT('Q', EXTRACT(QUARTER FROM trans_date_trans_time), '-', EXTRACT(YEAR FROM trans_date_trans_time)) AS transaction_quarter,
     category,
