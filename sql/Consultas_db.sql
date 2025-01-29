@@ -112,7 +112,7 @@ GROUP BY
     is_fraud
 ORDER BY
     is_fraud;
----------------------------------
+---Esta consulta está diseñada para obtener el número de transacciones por mes
 SELECT
     TO_CHAR(trans_date_trans_time, 'YYYY-MM') AS transaction_month,
     is_fraud,
