@@ -1,8 +1,8 @@
 <H1>Fraud Eye</H1>
 </BR>
-<H2>¡Somos el Equipo C23-116-Data y les presentamos nuestro MVP!</H2>
+<H3>¡Somos el Equipo C23-116-Data y les presentamos nuestro MVP!</H3>
 </BR>
-# Análisis Descriptivo y Predictivo de Transacciones para Detección de Fraudes con tarjetas de crédito
+<H2>Análisis Descriptivo y Predictivo de Transacciones para Detección de Fraudes</H2>
 
 ## **Descripción y objetivo del proyecto:**
 
@@ -11,7 +11,7 @@ Nuestro cliente, una plataforma de **e-commerce**, identificó un problema creci
 1. **Entender el comportamiento de las transacciones y los fraudes**.  
 2. **Desarrollar un modelo predictivo** que permitiera identificar transacciones potencialmente fraudulentas en tiempo real.  
 
----
+</BR>
 
 ## **Análisis y hallazgos clave**
 Para resolver el problema, realizamos un **análisis descriptivo y exploratorio** de los datos, centrándonos en identificar patrones y tendencias que pudieran indicar fraudes. Estos fueron los insights más relevantes:  
@@ -31,7 +31,7 @@ Para resolver el problema, realizamos un **análisis descriptivo y exploratorio*
 ### 4. **Montos de transacciones**  
 - Analizamos los montos máximos y mínimos de transacciones, y descubrimos que los fraudes tendían a ocurrir en **rangos de montos específicos**, lo que ayudó a establecer umbrales de alerta.  
 
----
+</BR>
 
 ## **Solución predictiva**  
 Con estos insights, no solo logramos entender el comportamiento de los fraudes, sino que también desarrollamos un **modelo predictivo** utilizando **GradientBoost XGBoost**. Este modelo permite:  
@@ -45,12 +45,12 @@ Además, el informe incluyó gráficos clave como:
 
 Estos elementos no solo brindaron claridad sobre el problema, sino que también proporcionaron una **hoja de ruta accionable** para prevenir fraudes en el futuro.  
 
----
+</BR>
 
 ## **Conclusión**  
 Este análisis no solo ayudó al cliente a comprender mejor los patrones de fraude en su plataforma, sino que también le proporcionó una herramienta poderosa para **anticiparse y mitigar riesgos**. Con el modelo predictivo y las recomendaciones basadas en datos, la plataforma está ahora mejor equipada para proteger sus transacciones y mantener la confianza de sus usuarios.  
 
----
+</BR>
 
 ## Integrantes
 
@@ -75,4 +75,4 @@ Este análisis no solo ayudó al cliente a comprender mejor los patrones de frau
 
 ## Arquitectura
 
-## Conclusiones
+
