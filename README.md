@@ -22,14 +22,12 @@ Para resolver el problema, realizamos un **análisis descriptivo y exploratorio*
 
 ### 2. **Geografía y demografía**  
 - Al visualizar la localización geográfica de las transacciones, identificamos **estados con mayor concentración de fraudes por cada mil habitantes**. Esto sugirió que ciertas regiones podrían ser focos de actividad fraudulenta.  
-- En cuanto a correlación entre densidad de población y fraudes, según se demuestra, aumentan los fraudes en cuanto a cantidad de habitantes.
+- En cuanto a correlación entre densidad de población y fraudes, según se demuestra, aumentan los fraudes en cuanto a **cantidad de habitantes**.
 - Además, al cruzar datos de edad y género, encontramos que **ciertos grupos demográficos** tenían una mayor incidencia de fraudes, lo que nos permitió segmentar y enfocar mejor las estrategias de prevención.  
 
 ### 3. **Categorías de negocio**  
 - Los gráficos de fraudes por categoría de negocio revelaron que **algunos tipos de comercios** eran más propensos a sufrir fraudes. Este hallazgo fue crucial para recomendar medidas específicas en esos sectores.  
 
-### 4. **Montos de transacciones**  
-- Analizamos los montos máximos y mínimos de transacciones, y descubrimos que los fraudes tendían a ocurrir en **rangos de montos específicos**, lo que ayudó a establecer umbrales de alerta.  
 
 </BR>
 
