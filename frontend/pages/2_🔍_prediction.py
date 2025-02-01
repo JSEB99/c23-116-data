@@ -54,11 +54,9 @@ with st.form("prediction"):
     dob = st.date_input("Fecha de Nacimiento",
                         format="YYYY-MM-DD", value="1980-03-24")
 
-    # Botón de enviar
     submitted = st.form_submit_button("🔍 Enviar Predicción")
 
     if submitted:
-        # Crear JSON con los datos ingresados
         user_data = {
             "trans_date_trans_time": trans_date_trans_time,
             "cc_num": cc_num,
@@ -76,23 +74,18 @@ with st.form("prediction"):
             "job": job,
             "dob": str(dob)
         }
-        # URL de la API (cambia esto por la URL real de tu API)
-        api_url = "https://c23-116-data.onrender.com/transaction"
 
-        # # Enviar los datos a la API
+        api_url = st.secrets["api"]["url_api"]
+
         response = requests.post(api_url, json=user_data)
 
-        # # Verificar si la solicitud fue exitosa
         if response.status_code == 200:
-            # Obtener la respuesta JSON de la API
             api_response = response.json()
 
-            # Supongamos que la API devuelve un campo "prediction" con 1 o 0
             if "prediction" in api_response:
                 prediction = api_response["prediction"]
                 st.success("✅ Datos enviados correctamente")
 
-                # Mostrar el resultado en un st.metric con un mensaje descriptivo
                 if prediction == 1:
                     st.markdown("""
                         <div>
@@ -108,9 +101,7 @@ with st.form("prediction"):
             else:
                 st.error(
                     "❌ La respuesta de la API no contiene el campo 'prediction'.")
-                # Mostrar la respuesta completa para depuración
                 st.json(api_response)
         else:
-            # Mostrar un mensaje de error si la solicitud no fue exitosa
             st.error(f"❌ Error al enviar los datos: {response.status_code}")
-            st.write(response.text)  # Mostrar el mensaje de error de la API
+            st.write(response.text)

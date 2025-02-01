@@ -11,11 +11,17 @@ def connection():
     load_dotenv()
 
     # Configuración de conexión
-    USER = os.getenv("user")
-    PASSWORD = os.getenv("password")
-    HOST = os.getenv("host")
-    PORT = os.getenv("port")
-    DBNAME = os.getenv("dbname")
+    # USER = os.getenv("user")
+    # PASSWORD = os.getenv("password")
+    # HOST = os.getenv("host")
+    # PORT = os.getenv("port")
+    # DBNAME = os.getenv("dbname")
+
+    USER = st.secrets["database"]["user"]
+    PASSWORD = st.secrets["database"]["password"]
+    HOST = st.secrets["database"]["host"]
+    PORT = st.secrets["database"]["port"]
+    DBNAME = st.secrets["database"]["dbname"]
 
     DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}"
 
@@ -25,8 +31,8 @@ def connection():
 def fetch_data(query):
     engine = connection()
     try:
-        print("Conectando a la base de datos...")  # Consulta completa
-        with engine.connect() as connection_db:  # Usar un bloque 'with' para cerrar la conexión automáticamente
+        print("Conectando a la base de datos...")
+        with engine.connect() as connection_db:
             print("Conexión establecida. Ejecutando consulta...")
             df = pd.read_sql_query(query, connection_db)
             print("Consulta ejecutada correctamente.")
@@ -53,13 +59,11 @@ def cards(bg_color, title_color, title, value_color, value, value_font_size="30p
             justify-content: space-between;
             align-items: center;;
         ">
-            <!-- Título centrado -->
             <div style="font-size: 12px; font-weight: bold; height: 30%;
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 10px; text-align: center;color:{title_color}">
                 {title}
             </div>
-            <!-- Valor centrado -->
             <div style="font-size: {value_font_size}; color: {value_color};
                         font-weight: bold; height: 70%; display: flex;
                         align-items: center; justify-content: center;">

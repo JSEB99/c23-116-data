@@ -2,10 +2,8 @@ import streamlit as st
 
 
 def show_sidebar():
-    # Agregar un título en la sidebar
     st.sidebar.header(":green[Eye]Fraud 💵", divider="green")
 
-    # Enlaces a otras páginas (si usas el sistema de páginas de Streamlit)
     st.sidebar.page_link("pages/1_📊_analysis.py", label="📊 Análisis de datos")
     st.sidebar.page_link("pages/2_🔍_prediction.py",
                          label="🔍 Predicción de datos")
