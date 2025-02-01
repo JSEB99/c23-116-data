@@ -10,6 +10,9 @@ venv/
 .venv/
 .env
 
+# Streamlit secrets
+secrets.toml
+
 ## Ignorar direcotorios __pycache__ y archivos .pyc
 __pycache__/
 *.pyc
