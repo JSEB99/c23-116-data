@@ -1,21 +1,10 @@
 from sqlalchemy import create_engine
 import pandas as pd
-from dotenv import load_dotenv
 import streamlit as st
-import os
 
 
 @st.cache_resource()
 def connection():
-    # Cargar las variables de entorno
-    load_dotenv()
-
-    # Configuración de conexión
-    # USER = os.getenv("user")
-    # PASSWORD = os.getenv("password")
-    # HOST = os.getenv("host")
-    # PORT = os.getenv("port")
-    # DBNAME = os.getenv("dbname")
 
     USER = st.secrets["database"]["user"]
     PASSWORD = st.secrets["database"]["password"]
