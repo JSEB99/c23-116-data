@@ -4,8 +4,8 @@
 
 - Crear ambiente virtual: `python -m venv nombre_ambiente`
 - Instalar requirements: `pip install -r requirements.txt`
-  > [!IMPORTANT]
-  > Se debe modificar las conexiones a la base de datos y api, en este caso se uso de los `streamlit secrets` que basicamente en el directorio `.streamlit/` se debe añadir un archivo `secrets.toml` y agregar la información de la siguiente forma:
+> [!IMPORTANT]
+> Se debe modificar las conexiones a la base de datos y api, en este caso se uso de los `streamlit secrets` que basicamente en el directorio `.streamlit/` se debe añadir un archivo `secrets.toml` y agregar la información de la siguiente forma:
 
 ```TOML
 [database]
