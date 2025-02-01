@@ -1,6 +1,9 @@
 # Archivos csv
 *.csv
 
+# Data streamlit
+!jobs.csv
+
 # Entorno
 env/
 venv/
