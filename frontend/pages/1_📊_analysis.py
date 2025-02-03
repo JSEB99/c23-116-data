@@ -106,13 +106,13 @@ with st.container():
                  correlation_df["corr población fraude"].values[0])
     with city_max:
         ch.cards(CARD_BG_COLOR, CARD_TITLE_COLOR,
-                 "Ciudad con mas Transacciónes", CARD_VALUE_COLOR,
+                 "Ciudad con mas Fraudes", CARD_VALUE_COLOR,
                  str(city_max_df["ciudad"].values[0])+": " +
                  str(city_max_df["transacciones fraudulentas"].values[0]),
                  "20px")
     with city_max_frauds:
         ch.cards(CARD_BG_COLOR, CARD_TITLE_COLOR,
-                 "Ciudad con mas Fraudes", CARD_VALUE_COLOR,
+                 "Ciudad con mas Transacciones", CARD_VALUE_COLOR,
                  str(city_max_trans_df["ciudad"].values[0])+": " +
                  str(city_max_trans_df["transacciones totales"].values[0]),
                  "20px")
