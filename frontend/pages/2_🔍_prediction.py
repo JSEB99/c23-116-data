@@ -3,7 +3,7 @@ import requests
 import utils.sidebar as sb
 
 st.set_page_config(page_title="Inicio", page_icon="🏠")
-with open("data/jobs.csv", "r", encoding="utf-8") as file:
+with open("frontend/data/jobs.csv", "r", encoding="utf-8") as file:
     jobs_list = [line.strip().replace('"', '') for line in file]
 
 sb.show_sidebar()
